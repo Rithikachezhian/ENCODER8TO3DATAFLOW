@@ -35,48 +35,35 @@ Logical circuit of the above expressions is given below:
 Figure 02  Encoder 8 * 3
 
 **Procedure**
+Define the 8-to-3 encoder truth table, ensuring only one input is high at a time.
 
-/* write all the steps invloved */
+Create a Verilog module using dataflow modeling with assign and ternary (? :) operators.
 
-1.Type the program in Quartus software.
+Assign the output bits (dout) based on which input (din[7:0]) is high.
 
-2.Compile and run the program.
+Write a testbench to apply one-hot input combinations and monitor outputs.
 
-3.Generate the RTL schematic and save the logic diagram.
-
-4.Create nodes for inputs and outputs to generate the timing diagram.
-
-5.For different input combinations generate the timing diagram.
+Simulate and verify the output matches the expected binary values from the truth table.
 
 
 **PROGRAM**
-
-/* Program for Encoder 8 To 3 in Dataflow Modelling and verify its truth table in quartus using Verilog programming. 
-Developed by: RITHIKA N
-RegisterNumber:212223230172
-```
-module EX05(din, a, b, c); 
-input [0:7] din; 
-output a,b,c; 
-assign a= (din[4] | din[5] | din[6] | din[7]); 
-assign b= (din[2] | din[3] | din[6] | din[7]);
-assign c= (din[1] | din[3] | din[5] | din[7]);
+module exp5(din,a,b,c);
+input [0:7] din;
+output a,b,c;
+assign a=(din[4]|din[5]|din[6]|din[7]);
+assign b=(din[2]|din[3]|din[6]|din[7]);
+assign c=(din[1]|din[3]|din[5]|din[7]);
 endmodule
 
-```
+Developed by: RITHIKA N RegisterNumber:212223230172
 */
 
 **RTL LOGIC FOR Encoder 8 To 3 in Dataflow Modelling**
-
-![image](https://github.com/Rithikachezhian/ENCODER8TO3DATAFLOW/assets/145742406/5252f9ef-8b5c-4f4e-8598-3c6f1c21e107)
+![Screenshot 2025-04-23 102712](https://github.com/user-attachments/assets/6ca8a2fd-54c5-42d6-8ffc-cc2e72433cb3)
 
 **TIMING DIGRAMS FOR Encoder 8 To 3 in Dataflow Modelling**
-
-![image](https://github.com/Rithikachezhian/ENCODER8TO3DATAFLOW/assets/145742406/53e86fa7-0021-4806-86df-52ecc1427a08)
+![Screenshot 2025-04-23 103607](https://github.com/user-attachments/assets/349d9864-0fed-4cf2-9ba1-2116c286987a)
 
 **RESULTS**
-
-Thus the implement Encoder 8 To 3 in Dataflow Modelling using verilog in Quartus software is successfully verified.
-
-
+Encoder 8 To 3 in Dataflow Modelling using verilog and validating their functionality using their functional tables was implemented successfully 
 
